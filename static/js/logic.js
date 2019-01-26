@@ -1,6 +1,9 @@
+console.log("hello world")
+
 function createMarkers(response) {
   // Pull earthquakes off the response
-  console.log(response);
+  var first = response[1];
+  console(fires);
 }
 
 
