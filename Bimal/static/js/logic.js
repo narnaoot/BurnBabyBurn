@@ -18,7 +18,7 @@ function createMap(earthquakeMarkers) {
         id: "mapbox.light",
         accessToken: API_KEY
     });
-// 
+
     // Create a baseMaps object to hold the lightmap layer
     var baseMaps = {
         "Light Map": lightmap
