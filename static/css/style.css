@@ -1,5 +1,10 @@
-html,
-body,
+html, body {
+  height: 100%;
+}
+
+/* Need to set height for container or container-fluid? Or else change height or width of map-id*/
+
+
 #map-id {
   height: 100%;
   padding: 0;
