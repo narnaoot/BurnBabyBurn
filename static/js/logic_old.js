@@ -15,7 +15,7 @@ function getOpacity(size) {
           0.0
 }
 
-function createMap(fireMarkers, whichMap) {
+function createMap(fireMarkers) {
   // Making the basemap
   var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
@@ -35,7 +35,7 @@ function createMap(fireMarkers, whichMap) {
     "Fires": fireMarkers
   };
 
-  var map = L.map(whichMap, {
+  var map = L.map("map-id", {
     center: [36.7378, -119.7871],
     zoom: 6,
     layers: [lightmap, fireMarkers]
@@ -45,7 +45,7 @@ function createMap(fireMarkers, whichMap) {
   L.control.layers(baseMaps, overlayMaps).addTo(map);
 }
 
-function createMarkers(fires, whichMap) {
+function createMarkers(fires) {
   // Verify we have data, give sample record
   console.log("Sample fire data:")
   console.log(fires[0]);
@@ -78,9 +78,8 @@ function createMarkers(fires, whichMap) {
     }
   }
   // Create layer group, pass to createMap
-  createMap((L.layerGroup(fireMarkers)), whichMap);
+  createMap(L.layerGroup(fireMarkers));
 }
 
 
-d3.csv("/static/data/2008_subset.csv").then(data => createMarkers(data, "map-id"));
-d3.csv("/static/data/1993_subset.csv").then(data => createMarkers(data, "map-2"));
+d3.csv("/static/data/2008_subset.csv").then(data => createMarkers(data));

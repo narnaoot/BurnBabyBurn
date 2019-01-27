@@ -5,6 +5,11 @@ body,
   padding: 0;
   margin: 0;
 }
+#map-2 {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 .legend {
   background: white;
   padding: 6px 8px;
