@@ -4,6 +4,7 @@
 console.log("hello world")
 
 function createMap(fireMarkers) {
+  console.log("got here")
 // Making the basemap
 var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
@@ -24,14 +25,18 @@ var overlayMaps = {
 };
 
 var map = L.map("map-id",{
-  center: [40.73, -74.0059],  
-  zoom: 12,
-  layers: [lightmap]
+  center: [34.4, -118.4],  
+  zoom: 4,
+  layers: [lightmap, fireMarkers]
 });
-map.addLayer(fireMarkers);
 
-// Create layer control with both baseMaps & overlayMaps.  Add to map
+// // map.addLayer(fireMarkers);
+// fireMarkers.addTo(map);
+
+// // Create layer control with both baseMaps & overlayMaps.  Add to map
 L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+
 
 }
 
@@ -45,7 +50,7 @@ function createMarkers(fires) {
   var fireMarkers = [];
 
   // Loop through the array
-  for (var index = 0; index < fires.length; index++) {
+  for (var index = 0; index < 50; index++) {
     // Assign variables for readability
     var fire = fires[index];
     var latitude = fire.LATITUDE;
@@ -53,13 +58,14 @@ function createMarkers(fires) {
     console.log(latitude, longitude)
 
     // Create one marker at a time
-    var singleMarker = L.marker(latitude, longitude).bindPopup("yay");
+    var singleMarker = L.marker([latitude, longitude]).bindPopup("yay");
 
     // Add our new marker to the array
-    fireMarkers.PushManager(singleMarker);
+    fireMarkers.push(singleMarker);
  
   }
   // Create layer group, pass to createMap
+  console.log("reached just before the create map function call")
   createMap(L.layerGroup(fireMarkers));
  
 
