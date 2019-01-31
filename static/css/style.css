@@ -2,20 +2,28 @@ html, body {
   height: 100%;
 }
 
-/* Need to set height for container or container-fluid? Or else change height or width of map-id*/
-
+#map-title {
+  z-index: 1000;
+  position: absolute;
+  margin-left: 80px;
+  bottom: 40px;
+  color: blue;
+}
 
 #map-id {
-  height: 100%;
-  width: 50%;
-  padding: 0;
-  margin: 0;
+  height: 80%;
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 50px;
+  float: left;
 }
 #map-2 {
-  height: 100%;
-  width: 50%;
-  padding: 0;
-  margin: 0;
+  height: 80%;
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+  margin-top: 50px;
 }
 .legend {
   background: white;
