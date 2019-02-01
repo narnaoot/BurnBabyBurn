@@ -34,5 +34,9 @@ def nineteennintetythree():
 def twothousandandeight():
     return render_template("2008.html")
 
+@app.route("/risk")
+def risk():
+    return risk("risk.html")
+
 if __name__ == "__main__":
     app.run()
