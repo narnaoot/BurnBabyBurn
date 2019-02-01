@@ -22,5 +22,17 @@ def index():
     """Return the homepage."""
     return render_template("index.html")
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/1993")
+def nineteennintetythree():
+    return render_template("1993.html")
+
+@app.route("/2008")
+def twothousandandeight():
+    return render_template("2008.html")
+
 if __name__ == "__main__":
     app.run()
