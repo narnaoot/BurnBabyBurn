@@ -1,5 +1,5 @@
 # Dependencies for web scraping
-from bs4 import BeautifulSoup as bs
+# from bs4 import BeautifulSoup as bs
 from splinter import Browser # Use splinter to automate browser actions
 import requests
 
