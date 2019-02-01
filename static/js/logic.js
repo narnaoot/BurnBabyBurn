@@ -82,5 +82,5 @@ function createMarkers(fires, whichMap) {
 }
 
 
-d3.csv("/static/data/2008_subset.csv").then(data => createMarkers(data, "map-id"));
-d3.csv("/static/data/1993_subset.csv").then(data => createMarkers(data, "map-2"));
+d3.csv("/static/data/2008_subset.csv").then(data => createMarkers(data, "map-2008"));
+d3.csv("/static/data/1993_subset.csv").then(data => createMarkers(data, "map-1993"));
