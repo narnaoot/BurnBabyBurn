@@ -1,3 +1,4 @@
+import fire_scraping as fs
 import os
 
 import pandas as pd
@@ -36,7 +37,12 @@ def twothousandandeight():
 
 @app.route("/risk")
 def risk():
-    return risk("risk.html")
+    return render_template("risk.html")
+
+@app.route("/scrape")
+def scrape():
+    latest = fs.scrape()
+    return jsonify(latest)
 
 if __name__ == "__main__":
     app.run()

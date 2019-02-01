@@ -3,6 +3,15 @@
 
 console.log("hello world")
 
+// Pulling in scrape
+let latest = document.getElementById('latest');
+d3.json('/scrape', function(data){
+  console.log(data);
+});
+
+
+// Creating leaflet maps
+
 function getOpacity(size) {
   // Helper function determines opacity of marker based on size (acreage) of fire
   // Fires below 100 acres will not be shown
