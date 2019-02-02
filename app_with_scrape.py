@@ -22,17 +22,17 @@ app = Flask(__name__)
 ## commenting out due to trouble with heroku loading beautiful soup
 ## note: in order to restore, also modify the "/" route & the index page
 
-# url_incident = "https://inciweb.nwcg.gov/feeds/rss/incidents/"
+url_incident = "https://inciweb.nwcg.gov/feeds/rss/incidents/"
    
-# r = requests.get(url_incident)
+r = requests.get(url_incident)
 
-# soup = bs(r.text, "lxml-xml")
-# title = soup.find_all("title")
-# date = soup.find_all("pubDate")
+soup = bs(r.text, "lxml-xml")
+title = soup.find_all("title")
+date = soup.find_all("pubDate")
 
-# print("Latest Fire Information")
-# title = title[1].text
-# date = date[0].text
+print("Latest Fire Information")
+title = title[1].text
+date = date[0].text
 
   
 
@@ -44,7 +44,7 @@ app = Flask(__name__)
 def index():
     """Return the homepage."""
     ## Note: add title=title, date=date for scrape
-    return render_template("index.html")
+    return render_template("index.html", title=title, date=date)
 
 @app.route("/about")
 def about():
