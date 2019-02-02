@@ -131,7 +131,7 @@
       <a href = "../static/images/2008_croplands2005_only.png"> <img src="../static/images/2008_croplands2005_only_thumb.png"></a>
       <br><HR><H2>Analysis of variable contributions</H2><br>
       The following table gives estimates of relative contributions of the environmental variables to the Maxent model.  To determine the first estimate, in each iteration of the training algorithm, the increase in regularized gain is added to the contribution of the corresponding variable, or subtracted from it if the change to the absolute value of lambda is negative.  For the second estimate, for each environmental variable in turn, the values of that variable on training presence and background data are randomly permuted.  The model is reevaluated on the permuted data, and the resulting drop in training AUC is shown in the table, normalized to percentages.  As with the variable jackknife, variable contributions should be interpreted with caution when the predictor variables are correlated.  Values shown are averages over replicate runs.<br>
-      <br><table border cols=3><tr><th>Variable</th><th>Percent contribution</th><th>Permutation importance</th><tr align=right><td>Roads</td><td>20.2</td><td>21.2</td></tr><tr align=right><td>bio18</td><td>11.5</td><td>12.2</td></tr><tr align=right><td>NavWater2009</td><td>10.3</td><td>5.2</td></tr><tr align=right><td>bio7</td><td>9.2</td><td>4.7</td></tr><tr align=right><td>croplands2005</td><td>7</td><td>0.8</td></tr><tr align=right><td>bio2</td><td>5.4</td><td>3.6</td></tr><tr align=right><td>bio19</td><td>3.9</td><td>0.4</td></tr><tr align=right><td>bio9</td><td>3.7</td><td>0.9</td></tr><tr align=right><td>bio4</td><td>3.4</td><td>6.3</td></tr><tr align=right><td>Built2009</td><td>2.8</td><td>1.8</td></tr><tr align=right><td>bio17</td><td>2.8</td><td>2.7</td></tr><tr align=right><td>bio3</td><td>2.7</td><td>1</td></tr><tr align=right><td>bio14</td><td>2.7</td><td>8.5</td></tr><tr align=right><td>Popdensity2010</td><td>2.6</td><td>3.4</td></tr><tr align=right><td>bio15</td><td>2.4</td><td>2.5</td></tr><tr align=right><td>bio16</td><td>2.4</td><td>2.2</td></tr><tr align=right><td>bio13</td><td>2</td><td>1.5</td></tr><tr align=right><td>Pasture2009</td><td>1.9</td><td>5</td></tr><tr align=right><td>bio1</td><td>1.1</td><td>0</td></tr><tr align=right><td>HFP2009</td><td>0.7</td><td>10.2</td></tr><tr align=right><td>Railways</td><td>0.6</td><td>0.7</td></tr><tr align=right><td>bio6</td><td>0.3</td><td>3.9</td></tr><tr align=right><td>bio10</td><td>0.3</td><td>1</td></tr><tr align=right><td>bio11</td><td>0.1</td><td>0.4</td></tr><tr align=right><td>bio8</td><td>0</td><td>0</td></tr><tr align=right><td>bio5</td><td>0</td><td>0</td></tr><tr align=right><td>bio12</td><td>0</td><td>0</td></tr></table><br><br>
+      <br><table border cols=3><tr><th>Variable</th><th>Percent contribution</th><th>Permutation importance</th><tr align=right><td>Roads</td><td>20.2</td><td>21.2</td></tr><tr align=right><td>Precipitation of Warmest Quarter</td><td>11.5</td><td>12.2</td></tr><tr align=right><td>NavWater2009</td><td>10.3</td><td>5.2</td></tr><tr align=right><td>Temperature Annual Range (BIO5-BIO6)</td><td>9.2</td><td>4.7</td></tr><tr align=right><td>croplands2005</td><td>7</td><td>0.8</td></tr><tr align=right><td>Mean Diurnal Range (Mean of monthly (max temp - min temp))</td><td>5.4</td><td>3.6</td></tr><tr align=right><td>Precipitation of Coldest Quarter</td><td>3.9</td><td>0.4</td></tr><tr align=right><td>Mean Temperature of Driest Quarter</td><td>3.7</td><td>0.9</td></tr><tr align=right><td>Temperature Seasonality (standard deviation *100)</td><td>3.4</td><td>6.3</td></tr><tr align=right><td>Built2009</td><td>2.8</td><td>1.8</td></tr><tr align=right><td>Precipitation of Driest Quarter</td><td>2.8</td><td>2.7</td></tr><tr align=right><td>Isothermality (BIO2/BIO7) (* 100)</td><td>2.7</td><td>1</td></tr><tr align=right><td>Precipitation of Driest Month</td><td>2.7</td><td>8.5</td></tr><tr align=right><td>Popdensity2010</td><td>2.6</td><td>3.4</td></tr><tr align=right><td>Precipitation Seasonality (Coefficient of Variation)</td><td>2.4</td><td>2.5</td></tr><tr align=right><td>Precipitation of Wettest Quarter</td><td>2.4</td><td>2.2</td></tr><tr align=right><td>Precipitation of Wettest Month</td><td>2</td><td>1.5</td></tr><tr align=right><td>Pasture2009</td><td>1.9</td><td>5</td></tr><tr align=right><td>Annual Mean Temperature</td><td>1.1</td><td>0</td></tr><tr align=right><td>HFP2009</td><td>0.7</td><td>10.2</td></tr><tr align=right><td>Railways</td><td>0.6</td><td>0.7</td></tr><tr align=right><td>Min Temperature of Coldest Month</td><td>0.3</td><td>3.9</td></tr><tr align=right><td>Mean Temperature of Warmest Quarter</td><td>0.3</td><td>1</td></tr><tr align=right><td>Mean Temperature of Coldest Quarter</td><td>0.1</td><td>0.4</td></tr><tr align=right><td>Mean Temperature of Wettest Quarter</td><td>0</td><td>0</td></tr><tr align=right><td>Max Temperature of Warmest Month</td><td>0</td><td>0</td></tr><tr align=right><td>Annual Precipitation</td><td>0</td><td>0</td></tr></table><br><br>
       The following picture shows the results of the jackknife test of variable importance.  The environmental variable with highest gain when used in isolation is Roads, which therefore appears to have the most useful information by itself.  The environmental variable that decreases the gain the most when it is omitted is Roads, which therefore appears to have the most information that isn't present in the other variables.  Values shown are averages over replicate runs.<br>
       <br><img src="../static/images/2008_jacknife.png"><br>
       <br>The next picture shows the same jackknife test, using test gain instead of training gain.  Note that conclusions about which variables are most important can change, now that we're looking at test data.
@@ -140,29 +140,6 @@
       <br><img src="../static/images/2008_jacknife_auc.png"><br>
       <br><HR><br>Command line to repeat this species model: java density.MaxEnt nowarnings noprefixes -E "" -E 2008 responsecurves jackknife outputformat=logistic outputdirectory=/Users/hasansulaeman/BurnBabyBurn/MAXENT samplesfile=/Users/hasansulaeman/year2008.csv environmentallayers=/Users/hasansulaeman/year2008.csv randomseed nowarnings noaskoverwrite replicates=5 writebackgroundpredictions threshold noaddsamplestobackground addallsamplestobackground writeplotdata noautofeature maximumiterations=2000 defaultprevalence=0.7<br>
     
-        <p>
-          The factors we examine are:
-
-            BIO1 = Annual Mean Temperature
-            BIO2 = Mean Diurnal Range (Mean of monthly (max temp - min temp))
-            BIO3 = Isothermality (BIO2/BIO7) (* 100)
-            BIO4 = Temperature Seasonality (standard deviation *100)
-            BIO5 = Max Temperature of Warmest Month
-            BIO6 = Min Temperature of Coldest Month
-            BIO7 = Temperature Annual Range (BIO5-BIO6)
-            BIO8 = Mean Temperature of Wettest Quarter
-            BIO9 = Mean Temperature of Driest Quarter
-            BIO10 = Mean Temperature of Warmest Quarter
-            BIO11 = Mean Temperature of Coldest Quarter
-            BIO12 = Annual Precipitation
-            BIO13 = Precipitation of Wettest Month
-            BIO14 = Precipitation of Driest Month
-            BIO15 = Precipitation Seasonality (Coefficient of Variation)
-            BIO16 = Precipitation of Wettest Quarter
-            BIO17 = Precipitation of Driest Quarter
-            BIO18 = Precipitation of Warmest Quarter
-            BIO19 = Precipitation of Coldest Quarter  </p>
-        </p>
         
   </div>
  
