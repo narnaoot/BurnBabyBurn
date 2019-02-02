@@ -1,5 +1,5 @@
 # Dependencies for web scraping
-from bs4 import BeautifulSoup as bs
+# from bs4 import BeautifulSoup as bs
 from splinter import Browser # Use splinter to automate browser actions
 import requests
 
@@ -20,17 +20,17 @@ app = Flask(__name__)
 
 ## Data scrape:  pull latest fire
 
-url_incident = "https://inciweb.nwcg.gov/feeds/rss/incidents/"
+# url_incident = "https://inciweb.nwcg.gov/feeds/rss/incidents/"
    
-r = requests.get(url_incident)
+# r = requests.get(url_incident)
 
-soup = bs(r.text, "lxml-xml")
-title = soup.find_all("title")
-date = soup.find_all("pubDate")
+# soup = bs(r.text, "lxml-xml")
+# title = soup.find_all("title")
+# date = soup.find_all("pubDate")
 
-print("Latest Fire Information")
-title = title[1].text
-date = date[0].text
+# print("Latest Fire Information")
+# title = title[1].text
+# date = date[0].text
 
   
 
@@ -59,10 +59,6 @@ def twothousandandeight():
 def risk():
     return render_template("risk.html")
 
-@app.route("/scrape")
-def scrape():
-    latest = fs.scrape()
-    return jsonify(latest)
 
 if __name__ == "__main__":
     app.run()
