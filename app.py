@@ -19,6 +19,8 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 ## Data scrape:  pull latest fire
+## commenting out due to trouble with heroku loading beautiful soup
+## note: in order to restore, also modify the "/" route & the index page
 
 # url_incident = "https://inciweb.nwcg.gov/feeds/rss/incidents/"
    
