@@ -16,9 +16,15 @@ For the machine learning component, we used the maxent package, which shows posi
 
 ## Project Components
 
-Flask app:  Used flask (deployed to heroku) to create different pages and to pull scrape information into index page.
-Leaflet map:  Index page shows two leaflet maps with fire data for 1993 and 2008.  Opacity of markers indicates size of fire; popup shows acres for each fire.  Note:  additional layers showing human footprint and climate factors did not play nicely with leaflet; we were not able to combine these multiple layers on the same graph.
-Factor correlation:  1993 and 2008.html pages show summary of how different factors affected fire risk.  Note: due to limitations of size that you can push to github, images for these two pages are not available on the repo.
-Risk map:  map of California showing fire risk (based on components and how they affect risk) were created for 1993, 2008, and the future.  Note: due to limitations of size that cabn be pushed to github, these maps are not available on the repo.
-Web scrape: Data on most recent fire pulled from incident site and displayed on index.html
-Live web page through Heroku:  burnbabyburn.heroku.com  Note:  Due to conflicts with beautiful soup and heroku, scrape does not show up on live site.  Due to limitations on size that can be pushed to github and heroku, risk map and images for 1993 and 2008 pages do not show up.
+#### Flask app:  
+Used flask (deployed to heroku) to create different pages and to pull scrape information into index page.
+#### Leaflet map:  
+Index page shows two leaflet maps with fire data for 1993 and 2008.  Opacity of markers indicates size of fire; popup shows acres for each fire.  Note:  additional layers showing human footprint and climate factors did not play nicely with leaflet; we were not able to combine these multiple layers on the same graph.
+#### Factor correlation:  
+1993 and 2008.html pages show summary of how different factors affected fire risk.  Note: due to limitations of size that you can push to github, images for these two pages are not available on the repo.
+#### Risk map:  
+map of California showing fire risk (based on components and how they affect risk) were created for 1993, 2008, and the future.  Note: due to limitations of size that cabn be pushed to github, these maps are not available on the repo.
+#### Web scrape: 
+Data on most recent fire pulled from incident site and displayed on index.html
+#### Live web page through Heroku:  
+burnbabyburn.heroku.com  Note:  Due to conflicts with beautiful soup and heroku, scrape does not show up on live site.  Due to limitations on size that can be pushed to github and heroku, risk map and images for 1993 and 2008 pages do not show up.
