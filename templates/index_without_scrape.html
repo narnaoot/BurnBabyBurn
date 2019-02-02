@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Burn Baby Burn</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="static/css/leaflet.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="static/css/bootswatch.css">
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+
+<body>
+  <!-- Bootstrap div-->
+  <!-- Navbar container + Explanatory Card + 2008 Fire Title Card-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">California Fires</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+            aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+
+
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/risk">Predictive Risk</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/1993">1993 Statistics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/2008">2008 Statistics</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-primary mb-3" style="max-width: 100rem;">
+          <div class="card-header">Each marker shows a single fire; marker opacity based on fire size. Not showing
+            fires smaller then 100 acres.
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- this section is for the scrape: doesn't run on heroku, uncomment to run locally -->
+    <!-- <div class="row">
+      <div class="col">
+        <blockquote class="blockquote text-center">
+
+          <footer class="blockquote-footer"> Latest fire: {{title}} on {{date}} </footer>
+
+        </blockquote>
+      </div>
+    </div> -->
+    <div class="row">
+      Due to size limits on github & heroku, have not been able to show other map layers with correlated factors
+    </div>
+
+
+  </div>
+
+  <!-- 2008 Map-->
+  <div class="container-fluid" id="map-1993">
+    <h1 id="map-title"> 1993 Fires</h1>
+  </div>
+
+  <!-- 1993 Maps-->
+  <div class="container-fluid" id="map-2008">
+    <h1 id="map-title">2008 Fires</h1>
+  </div>
+
+
+
+
+  <!-- D3 -->
+  <script src="static/js/d3.min.js"></script>
+
+  <!-- Leaflet JavaScript -->
+  <script src="static/js/leaflet.js"></script>
+
+  <!-- API Key -->
+  <script type="text/javascript" src="static/js/config.js"></script>
+
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="static/js/logic.js"></script>
+
+  <!-- Bootstap Javascript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
