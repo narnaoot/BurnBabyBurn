@@ -41,7 +41,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     """Return the homepage."""
-    return render_template("index.html", title=title, date=date)
+    ## Note: add title=title, date=date for scrape
+    return render_template("index.html")
 
 @app.route("/about")
 def about():
