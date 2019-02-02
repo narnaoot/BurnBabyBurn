@@ -1,8 +1,4 @@
-# Dependencies for web scraping
-from bs4 import BeautifulSoup as bs
-from splinter import Browser # Use splinter to automate browser actions
-import requests
-
+import fire_scraping as fs
 import os
 
 import pandas as pd
@@ -18,30 +14,14 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-## Data scrape:  pull latest fire
 
-url_incident = "https://inciweb.nwcg.gov/feeds/rss/incidents/"
-   
-r = requests.get(url_incident)
-
-soup = bs(r.text, "lxml-xml")
-title = soup.find_all("title")
-date = soup.find_all("pubDate")
-
-print("Latest Fire Information")
-title = title[1].text
-date = date[0].text
-
-  
-
-## Setting up flask routes
 
 
 
 @app.route("/")
 def index():
     """Return the homepage."""
-    return render_template("index.html", title=title, date=date)
+    return render_template("index.html")
 
 @app.route("/about")
 def about():
