@@ -21,7 +21,7 @@ Used flask to create different pages and to pull scrape information into index p
 #### Leaflet map:  
 Index page shows two leaflet maps with fire data for 1993 and 2008.  Opacity of markers indicates size of fire; popup shows acres for each fire.  Note:  additional layers showing human footprint and climate factors did not play nicely with leaflet; we were not able to combine these multiple layers on the same graph.
 #### Factor correlation:  
-1993 and 2008.html pages show summary of how different factors affected fire risk.  Note: due to limitations of size that you can push to github, images for these two pages are not available on the repo.
+1993 and 2008.html pages show summary of how different factors affected fire risk.
 #### Risk map:  
 map of California showing fire risk (based on components and how they affect risk) were created for 1993, 2008, and the future.  Note: due to limitations of size that cabn be pushed to github, these maps are not available on the repo.
 #### Web scrape: 
