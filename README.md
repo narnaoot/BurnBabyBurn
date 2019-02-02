@@ -17,7 +17,7 @@ For the machine learning component, we used the maxent package, which shows posi
 ## Project Components
 
 #### Flask app:  
-Used flask (deployed to heroku) to create different pages and to pull scrape information into index page.
+Used flask to create different pages and to pull scrape information into index page.
 #### Leaflet map:  
 Index page shows two leaflet maps with fire data for 1993 and 2008.  Opacity of markers indicates size of fire; popup shows acres for each fire.  Note:  additional layers showing human footprint and climate factors did not play nicely with leaflet; we were not able to combine these multiple layers on the same graph.
 #### Factor correlation:  
